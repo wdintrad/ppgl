@@ -1,0 +1,862 @@
+<!DOCTYPE HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	
+		<title> SIGAA- Sistema Integrado de Gestão de Atividades Acadêmicas </title>
+		<link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/basic_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" rel="stylesheet" type="text/css" /><link class="component" href="/sigaa/a4j/s/3_3_3.Finalorg/richfaces/renderkit/html/css/extended_classes.xcss/DATB/eAF7sqpgb-jyGdIAFrMEaw__.jsf" media="rich-extended-skinning" rel="stylesheet" type="text/css" /><script type="text/javascript">window.RICH_FACES_EXTENDED_SKINNING_ON=true;</script><script src="/sigaa/a4j/g/3_3_3.Finalorg/richfaces/renderkit/html/scripts/skinning.js.jsf" type="text/javascript"></script><link rel="shortcut icon" href="/sigaa/img/sigaa_UFPB.ico" />
+	
+		<script>
+		//Indica para algumas funções javascript que o layout utilizado é o do SIGAA beta.
+		const LAYOUT_BETA = true;
+		</script>
+		<script type="text/javascript" src="/sigaa/shared/beta/js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/sigaa/shared/beta/js/jquery-migrate-3.0.0.min.js"></script>
+		<script type="text/javascript" src="/sigaa/shared/beta/js/bootstrap.js"></script>
+		<script type="text/javascript" src="/sigaa/shared/beta/js/bootstrap-dialog.js"></script>
+		<script type="text/javascript" src="/sigaa/shared/beta/js/sigaa_beta_utils.js"></script>
+		<script type="text/javascript" src="/sigaa/shared/javascript/paineis/painel_generico.js"></script>
+		<script type="text/javascript" src="/sigaa/shared/javascript/formatador.js"></script>
+		
+		<script type="text/javascript" src="/sigaa/jsBundles/jawr_loader.js"></script>
+		
+		<script type="text/javascript">
+			<!-- jawr_loader.js / jawr.shared.properties -->
+			JAWR.loader.script('/sigaa/bundles/js/sigaa_base.js');
+		</script>
+			
+		<link rel="stylesheet" type="text/css" href="/sigaa/shared/beta/css/bootstrap.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/sigaa/shared/beta/css/font-awesome.css" media="screen" />
+		
+		<!-- Tema do SIGAA BETA -->
+		
+		
+		<link rel="stylesheet" type="text/css" href="/sigaa/shared/beta/css/tema9.css" media="screen" id="temaLayout" />
+		
+		<!-- INICIO MENU -->
+		<script type="text/javascript" src="/sigaa/shared/beta/js/jquery.smartmenus.js"></script>
+		<script type="text/javascript" src="/sigaa/shared/beta/js/jquery.smartmenus.keyboard.js"></script>
+		<link rel="stylesheet" type="text/css" href="/sigaa/shared/beta/css/sm-core-css.css" media="screen" />
+		<style>ul.sm *{z-index: 5;}</style>
+		
+		<script type="text/javascript">
+			var itemWithSubMenu = null;
+			jQuery(function($) {
+				<!-- SmartMenus jQuery init - jquery.smartmenus.js -->
+				$menu = $('#main-menu');
+				if ( $menu ){
+					$menu.smartmenus({
+						subMenusSubOffsetX : 1,
+						subMenusSubOffsetY : -8,
+						hideDuration : 0,
+						showDuration : 0,
+						subMenusMaxWidth: '26em',
+					});
+					$menu.smartmenus('keyboardSetHotkey', '123', 'shiftKey');
+				}
+				<!-- FIM MENU -->
+				
+				<!-- Detalhes do usuário -->
+				//mostra ou oculta a opção de alterar a foto do discente
+				$("#detalhes-usuario .foto-perfil").bind({
+					mouseenter:function(){$(this).find(".acoes").slideDown()},
+					mouseleave:function(){$(this).find(".acoes").slideUp()}
+				})
+				
+				
+				<!-- paleta cores - sigaa_beta_utils.js -->
+				if ( $('#paleta-cores') ){
+					$('#paleta-cores').paletaCores();
+					$('#paleta-cores-horizontal').paletaCores();
+				}
+				<!-- FIM paleta cores -->
+
+				<!-- acessibilidade texto - sigaa_beta_utils.js -->
+				if ($('#menu-acessibilidade')){
+					$('#acessibilidade-contraste').contraste();
+					//inicia o contraste, caso tenha a ação sido executada anteriormente
+					$('#menu-acessibilidade').contraste("iniciar");
+					
+				}
+				<!-- FIM acessibilidade texto -->
+			});
+		</script>
+    <script type="text/javascript">var useGeneralJS = false;</script>	
+    <script type="text/javascript" src="/sigaa/shared/javascript/general.js" ></script>
+	</head>
+	
+	<body>
+	
+	<div class="wrapper">
+		<div id="ufrn-cabecalho">
+			<div id="barra-sistema">
+				<div class="ufrn-container">
+					<div class="ufrn-marca pull-left">
+						<p>UFPB</p>
+					</div>
+									
+					<ul id="menu-acessibilidade">
+						<li><a href="#conteudo" class="sr-only sr-only-focusable">Pular para conteúdo</a></li>
+						<li class="separador"></li>
+						<li><a href="#" id="acessibilidade-contraste" title="Contraste" class="toggleable"><span class="icone-contraste"></span><span class="sr-only">Auto Contraste</span></a></li>
+	                    <li class="separador"></li>
+						<li>
+							<a href="/sigaa/logon/" title="Acessar o SIGAA" style="font-size: 15px; font-weight: bold;">Entrar</a>
+						</li>
+	                </ul>  
+				</div>
+			</div>
+			
+			
+
+
+
+
+<!-- INICIO PAINEL -->
+<div id="painel-usuario">
+  <div class="ufrn-container">
+		
+		<div class="logo pull-left" style="width: 18%;">
+			<img alt="SIGAA beta" title="SIGAA" height="51" src="/sigaa/shared/beta/img/SIGAA-horizontal.png" />
+			<span style="left: 32%; top: 80%;"> <a href="/sigaa/public/"> Portal Público</a></span>
+		</div>
+        
+        <div class="painel-usuario-row pull-right">
+		
+			<div class="painel-usuario-acoes">
+				<ul>
+					
+				</ul>
+			</div>
+	
+			  
+			<div class="painel-usuario-identificacao" style="width: 60%;">
+				<span style="color: var(--fonte-cor-texto-primaria); font-size: 20px; text-align: right; line-height: 20px;">
+					Universidade Federal da Paraíba
+				</span>
+			</div>
+			
+			<div class="painel-usuario-foto">
+				<img alt="Brasão da UFPB" src="/sigaa/img/brasao_ufpb.png" style="width: 85%;">
+	        </div>
+   		</div>
+   	</div>
+</div>
+
+<!-- FIM PAINEL -->
+		</div>
+		
+		<div id="conteudo" class="ufrn-container"> <!-- Será fechado em rodape.jsp -->
+		
+	<script>
+	//#FIX conflito prototype e bootstrap
+	//INICIO
+	jQuery.noConflict();
+	/*if (Prototype.BrowserFeatures.ElementExtensions) {
+	    var disablePrototypeJS = function (method, pluginsToDisable) {
+	            var handler = function (event) {
+	                event.target[method] = undefined;
+	                setTimeout(function () {
+	                    delete event.target[method];
+	                }, 0);
+	            };
+	            pluginsToDisable.each(function (plugin) { 
+	                jQuery(window).on(method + '.bs.' + plugin, handler);
+	            });
+	        },
+	        pluginsToDisable = ['collapse', 'dropdown', 'modal', 'tooltip'];
+	    disablePrototypeJS('show', pluginsToDisable);
+	    disablePrototypeJS('hide', pluginsToDisable);
+	}*/
+	//FIM
+	
+	jQuery(function($) {
+		transformaBreadcumbs();
+		tranformaDescricaoOperacao();
+		selecionarPrimeiraAba();
+		//transformaBotoes();
+		
+		//adicionaCssTabelaListagem();
+		
+		//removeRichFaceCss();
+		
+		function transformaBreadcumbs(){
+			//Transforma o breadcumbs da versão antiga para a versão nova
+			var breadcumbsAtual = jQuery(".ufrn-container > h2");
+			if ( breadcumbsAtual.length == 0 ) {
+				breadcumbsAtual = jQuery(".ufrn-container form > h2");
+			}
+			
+			if ( breadcumbsAtual.length == 0 ) return;
+
+			var arrPath = breadcumbsAtual.html().split("&gt;");
+			var expressaoLink = /<a href=\"(.+)">(.+)<\/a>/m;
+			var padraoLink = new RegExp( expressaoLink );
+			template = "<ol class='breadcrumb'>";
+			for( i=0; i<arrPath.length-1; i++ ){
+				if ( i == 0 && padraoLink.test( arrPath[i] ) ){
+					link = arrPath[i].match( expressaoLink )[1];
+					nome = arrPath[i].match( expressaoLink )[2];
+					template += "<li><a href="+ link +"><span class='glyphicon glyphicon-home'></span>"+ nome +"</a></li>";	
+				}else{
+					template += "<li>"+ jQuery.trim(arrPath[i]) +"</li>";	
+				}				
+			}
+			template += "</ol>";
+			
+			//ultimo elemento é o título da página
+			template += "<div class='page-header'>";
+			template += "<h1>"+jQuery.trim(arrPath[arrPath.length-1])+"</h1>";
+			template += "</div>";
+
+			breadcumbsAtual[0].outerHTML = template ;
+		}
+		
+		function tranformaDescricaoOperacao(){
+			//pega apenas a descrição da operação da tela.
+			var descricaoOperacao = jQuery(".ufrn-container > .descricaoOperacao");
+			
+			if ( descricaoOperacao.length == 0 ) {
+				descricaoOperacao = jQuery(".ufrn-container form > .descricaoOperacao");
+			}
+			
+			if ( descricaoOperacao.length == 0 ) {
+				descricaoOperacao = jQuery(".bootstrap-dialog-message .descricaoOperacao");
+				descricaoOperacao.find('br').remove();
+			}
+			
+			descricaoOperacao.each( function( index ){
+				obj = jQuery(this);
+				obj.removeClass("descricaoOperacao");
+				
+				if (!obj.hasClass("alert")){//se já tem a classe alert, assume-se que já está no padrão do sigaa beta
+					obj.addClass("conteudo");
+					obj.wrap("<div class='alert alert-info'></div>");
+					obj.parent().prepend( "<div class='icone'><span class='glyphicon glyphicon-info-sign'></span></div>" );
+				}
+			});
+			
+		}
+		
+		function transformaBotoes(){
+			jQuery("table.formulario tfoot,table.visualizacao tfoot, table.listagem tfoot").find("button,input[type=submit],input[type=button]").each( function( index ){
+				if( !jQuery(this).hasClass("btn") ){
+					jQuery(this).addClass("btn");
+				}
+				
+				if ( !jQuery(this).hasClass("btn-default") && !jQuery(this).hasClass("btn-primary") ){
+					jQuery(this).addClass("btn-default");
+				}
+			});
+		}
+		
+		function removeRichFaceCss(){
+			/** Remove todas as classes do rich-faces **/
+			jQuery("[class*='rich-']").each(function () {
+			    var className = this.className.match(/rich-(\w|-)+/i);
+			    if ( jQuery(this).hasClass( className[0] ) ){
+			       jQuery(this).removeClass( className[0] );
+			    }
+			});
+		}
+		
+		function adicionaCssTabelaListagem(){
+			jQuery("table.listagem").each( function(){
+				var arrClassToAdd = ["table","table-hover"];
+				var table = jQuery(this);
+				for ( i=0; i < arrClassToAdd.length; i++ ){
+					if ( !table.hasClass( arrClassToAdd[i] ) ){
+						table.addClass( arrClassToAdd[i] );
+					}
+				}
+			});
+		}
+		
+		//remove o menu antigo se ele estiver incluido
+		if (jQuery('#menu-dropdown')){
+		  jQuery('#menu-dropdown').remove();
+		}
+		
+	});
+	</script>
+ 
+
+
+
+
+
+
+	
+
+<link rel="stylesheet" type="text/css" href="/sigaa/shared/beta/css/icones_portal_publico.css" media="screen" />
+
+
+
+<div id="menu">
+	<div class="ufpb-abas">
+		<a id="aba-academico" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('academico')" >Acadêmico</a>
+		<a id="aba-biblioteca" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('biblioteca')" >Biblioteca</a>
+		<a id="aba-ensino" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('ensino')" >Ensino</a>
+		<a id="aba-tecnico" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('tecnico')" >Técnico</a>
+		<a id="aba-graduacao" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('graduacao')" >Graduação</a>
+		<a id="aba-pos" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('pos')" >Pós-Graduação</a>
+		<a id="aba-extensao" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('extensao')" >Extensão</a>
+		<a id="aba-pesquisa" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('pesquisa')" >Pesquisa</a>
+		<a id="aba-processos" class="ufpb-abas-item" href="javascript:exibirConteudoAbaUFPB('processos')" >Processos Seletivos</a>
+	</div>
+	
+	<div id="academico" class="ufpb-abas-conteudo">
+	 	<dl>
+	<dt>
+		<div class="opcao docentes">
+		<h3>Docentes</h3>
+		<a href="/sigaa/public/docente/busca_docentes.jsf?aba=p-academico">
+			Acesse as páginas públicas dos docentes da UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao autenticacao">
+		<h3>Autenticação de Documentos</h3>
+		<a href="/sigaa/documentos/?aba=p-academico">Efetue a autenticação dos documentos emitidos pelo SIGAA.</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao responsaveis">
+		<h3>Chefes, Coordenações e Diretores.</h3>
+		<a href="/sigaa/public/academico/busca_responsavel.jsf?aba=p-academico">
+		Consulte os chefes de departamentos, coordenadores de curso 
+		e diretores de unidade.</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao departamentos">
+		<h3>Departamentos</h3>
+		<a href="/sigaa/public/departamento/lista.jsf?aba=p-academico">Conheça os departamentos da UFPB.</a>
+		</div>
+	</dt>
+</dl>
+
+<dl>
+	<dt>
+		<div class="opcao calendario">
+		<h3>Calendário Acadêmico</h3>
+		 <a href="http://www.ufpb.br/prg/content/calendario" target="_blank">
+		Consulte o calendário acadêmico da UFPB.
+		</a>
+		</div>
+	
+	</dt>
+	
+	<dt>
+		<div class="opcao centros">
+		<h3>Centros/Unidades Especializadas</h3>
+		<a href="/sigaa/public/centro/lista.jsf?aba=p-academico" target="_self">Conheça os centros/unidades especializadas da UFPB.</a>
+		</div>
+	</dt>
+	 <dt>
+		<div class="opcao programas">
+		<h3>Programas de Pós-Graduação</h3>
+		<a href="/sigaa/public/programa/lista.jsf?aba=p-academico">Conheça os programas de pós-graduação da UFPB.</a>
+		</div>
+	</dt>
+	 <dt>
+		<div class="opcao bolsistas">
+			<h3>Situação dos Bolsistas</h3>
+			
+<form id="j_id_jsp_1213570139_1" name="j_id_jsp_1213570139_1" method="post" action="/sigaa/" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id_jsp_1213570139_1" value="j_id_jsp_1213570139_1" />
+
+<script type="text/javascript" language="Javascript">function dpf(f) {var adp = f.adp;if (adp != null) {for (var i = 0;i < adp.length;i++) {f.removeChild(adp[i]);}}};function apf(f, pvp) {var adp = new Array();f.adp = adp;var i = 0;for (k in pvp) {var p = document.createElement("input");p.type = "hidden";p.name = k;p.value = pvp[k];f.appendChild(p);adp[i++] = p;}};function jsfcljs(f, pvp, t) {apf(f, pvp);var ft = f.target;if (t) {f.target = t;}f.submit();f.target = ft;dpf(f);};</script>
+<a href="#" onclick="if(typeof jsfcljs == 'function'){jsfcljs(document.getElementById('j_id_jsp_1213570139_1'),{'j_id_jsp_1213570139_1:j_id_jsp_1213570139_2':'j_id_jsp_1213570139_1:j_id_jsp_1213570139_2'},'');}return false"> Veja a listagem e a situação dos alunos assistidos pela PRAPE. </a><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id4" />
+</form>
+		</div>
+	</dt>
+</dl>
+	</div>
+	<div id="biblioteca" class="ufpb-abas-conteudo">
+	 	
+
+<dl>
+	<dt>
+		<div class="opcao Acervo">
+		<h3>Consultar Acervo</h3>
+		<a href="/sigaa/public/biblioteca/buscaPublicaAcervo.jsf?aba=p-biblioteca">Consulte o acervo das bibliotecas da UFPB.</a>
+		</div>
+	</dt>
+	
+	<dt>
+		<div class="opcao Acervo">
+		<h3>Consultar Acervo de Artigos </h3>
+		<a href="/sigaa/public/biblioteca/buscaPublicaAcervoArtigos.jsf?aba=p-biblioteca">Consulte no acervo das bibliotecas da UFPB artigos de revistas, jornais, entre outros.</a>
+		</div>
+	</dt>
+	
+		 
+		
+	
+</dl>
+	</div>
+	<div id="ensino" class="ufpb-abas-conteudo">
+	 	<dl>
+
+	<dt>
+		<div class="opcao turmas">
+		<h3>Turmas</h3>
+		<a href="/sigaa/public/turmas/listar.jsf?aba=p-ensino">
+			Acesse as turmas disponíveis por departamentos e níveis de ensino.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao componentes">
+		<h3>Componentes Curriculares</h3>
+		<a href="/sigaa/public/componentes/busca_componentes.jsf?aba=p-ensino">
+			Consulte os detalhes dos componentes curriculares ministrados nos cursos da UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao curso-graduacao">
+		<h3>Cursos de Graduação</h3>
+		<a href="/sigaa/public/curso/lista.jsf?nivel=G&aba=p-ensino">
+		Consulte os cursos de Graduação oferecidos pela UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao curso-stricto">
+		<h3>Cursos de Stricto-Sensu</h3>
+		<a href="/sigaa/public/curso/lista.jsf?nivel=S&aba=p-ensino">
+		Consulte os cursos de Stricto-Sensu oferecidos pela UFPB.
+		</a>
+		</div>
+	</dt>
+</dl>
+
+<dl>
+	<dt>
+		<div class="opcao curso-latos">
+		<h3>Cursos de Lato-Sensu</h3>
+		<a href="/sigaa/public/curso/lista.jsf?nivel=L&aba=p-ensino">
+		Consulte os cursos de Lato-Sensu oferecidos pela UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao curso-tecnico">
+		<h3>Cursos Técnico</h3>
+		<a href="/sigaa/public/curso/lista.jsf?nivel=T&aba=p-ensino">
+		Consulte os cursos de nível técnico oferecidos pela UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao curso-aberto">
+		<h3>Cursos Abertos / Comunidades Virtuais</h3>
+		<a href="/sigaa/public/cursosabertos.jsf?aba=p-ensino">
+		Consulte os cursos abertos através dos centros e departamentos e também as Comunidades Virtuais.
+		</a>
+		</div>
+	</dt>
+</dl>
+<br clear="all"/>
+	</div>
+	<div id="tecnico" class="ufpb-abas-conteudo">
+		
+
+<dl>
+	<dt>
+		<div class="opcao curso-tecnico">
+		<h3>Cursos</h3>
+		<a href="/sigaa/public/curso/lista.jsf?nivel=T&aba=p-tecnico">Consulte os cursos técnicos oferecidos pela UFPB.</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao componentes">
+		<h3>Componentes Curriculares</h3>
+		<a href="/sigaa/public/componentes/busca_componentes.jsf?nivel=T&aba=p-tecnico">
+			Consulte os detalhes e os programas dos componentes curriculares ministrados nos cursos de graduação da UFPB.
+		</a>
+		</div>
+	</dt>
+		
+</dl>
+	</div>
+	<div id="graduacao" class="ufpb-abas-conteudo">
+		<dl>
+	<dt>
+		<div class="opcao curso-graduacao">
+		<h3>Cursos</h3>
+		<a href="/sigaa/public/curso/lista.jsf?nivel=G&aba=p-graduacao">
+		Consulte os cursos de Graduação oferecidos pela UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao componentes">
+		<h3>Componentes Curriculares</h3>
+		<a href="/sigaa/public/componentes/busca_componentes.jsf?nivel=G&aba=p-graduacao">
+			Consulte os detalhes dos componentes curriculares ministrados nos cursos de graduação da UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao calendario">
+		<h3>Calendário Acadêmico</h3>
+		<a href="http://www.prg.ufpb.br/?q=view-calendario-geral">Consulte o calendário acadêmico dos cursos de graduação.</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao estruturaCurricular">
+		<h3>Estruturas Curriculares</h3>
+		<a href="/sigaa/public/curso/lista.jsf?nivel=G&aba=p-graduacao">
+			Acesse um curso e consulte sua estrutura curricular.
+		</a>
+		</div>
+	</dt>
+</dl>
+<dl>	
+	<dt>
+		<div class="opcao regulamento">
+		<h3>Regulamento dos Cursos de Graduação</h3>
+		<a href="https://sigrh.ufpb.br/sigrh/downloadArquivo?idArquivo=96259&key=2124d1c7036c9f256f6354a710b5503e&formato=pdf">Consulte o regulamentos dos cursos de graduação.</a>
+		</div>
+	</dt>
+	
+	<dt>
+		<div class="opcao registros-diplomas">
+			<h3>Registros de Diploma</h3>
+			<a href="/sigaa/public/diplomas/busca_registros.jsf?nivel=G&aba=p-graduacao">
+			Consulte informações de registros de diplomas da UFPB.
+			</a>
+		</div>
+	</dt>
+</dl>
+	</div>
+	<div id="pos" class="ufpb-abas-conteudo">
+		
+
+
+<dl>
+	<h2 style="color: var(--fonte-cor-texto-primaria);"> Stricto-Sensu</h2>
+	<dt>
+		<div class="opcao curso-stricto">
+		<h3>Cursos</h3>
+		<a href="/sigaa/public/curso/lista.jsf?nivel=S&aba=p-stricto">Consulte os cursos de Mestrado/Doutorado oferecidos pela UFPB.</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao componentes">
+		<h3>Componentes Curriculares</h3>
+		<a href="/sigaa/public/componentes/busca_componentes.jsf?nivel=S&aba=p-stricto">
+			Consulte os detalhes e os programas dos componentes curriculares ministrados nos cursos do Stricto-Sensu da UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt> 	
+		<div class="opcao selecao">
+		<h3>Processos Seletivos  </h3>
+		<a href="/sigaa/public/processo_seletivo/lista.jsf?nivel=S&aba=p-stricto">
+			Consulte os processos seletivos abertos, inscreva-se ou gerencie suas inscrições.
+		</a>
+		</div> 
+	</dt>
+	<dt>
+		<div class="opcao programas">
+		<h3>Programas de Pós-Graduação</h3>
+		<a href="/sigaa/public/programa/lista.jsf?aba=p-stricto">Conheça os programas de pós-graduação da UFPB.</a>
+		</div>
+	</dt>
+
+</dl>
+		
+
+<dl>
+	<h2 style="color: var(--fonte-cor-texto-primaria);"> Lato-Sensu</h2>
+	<dt>
+		<div class="opcao curso-latos">
+		<h3>Cursos de Lato-Sensu</h3>
+		
+		<a href="/sigaa/public/curso/lista.jsf?nivel=L&aba=p-lato">
+		Consulte os cursos de especialização oferecidos pela UFPB.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao selecao">
+		<h3>Processos Seletivos  </h3>
+		<a href="/sigaa/public/processo_seletivo/lista.jsf?nivel=L&aba=p-lato">
+			Consulte os processos seletivos abertos, inscreva-se ou gerencie suas inscrições.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao componentes">
+		<h3>Componentes Curriculares</h3>
+		<a href="/sigaa/public/componentes/busca_componentes.jsf?nivel=L&aba=p-lato">
+			Consulte os detalhes e os programas dos componentes curriculares ministrados nos cursos do Lato-Sensu da UFPB.
+		</a>
+		</div>
+	</dt>
+</dl>
+	</div>
+	<div id="extensao" class="ufpb-abas-conteudo">
+		
+<dl>
+	<dt>
+		<div class="opcao AcoesExtensao">
+		<h3>Ações de Extensão</h3>
+		<a href="/sigaa/public/extensao/consulta_extensao.jsf?aba=p-extensao">
+			Consulte as ações de extensão desenvolvidas pela UFPB
+		</a>
+		</div>
+	</dt>
+	
+	<dt>
+		<div class="opcao ProgramaExtensao">
+		<h3>Programas</h3>
+		<a href="/sigaa/public/extensao/consulta_extensao.jsf?acao=1&aba=p-extensao">
+			Consulte os Programas de extensão desenvolvidos pela UFPB
+		</a>
+		</div>
+	</dt>
+	
+	<dt>
+		<div class="opcao ProjetoExtensao">
+		<h3>Projetos</h3>
+		<a href="/sigaa/public/extensao/consulta_extensao.jsf?acao=2&aba=p-extensao">
+			Consulte os Projetos de extensão desenvolvidos pela UFPB
+		</a>
+		</div>
+	</dt>
+	
+	<dt>
+		<div class="opcao CursoExtensao">
+		<h3>Cursos</h3>
+		<a href="/sigaa/public/extensao/consulta_extensao.jsf?acao=3&aba=p-extensao">
+			Consulte os Cursos de extensão ministrados pela UFPB
+		</a>
+		</div>
+	</dt>
+</dl>
+<dl>
+	<dt>
+		<div class="opcao EventoExtensao">
+		<h3>Eventos</h3>
+		<a href="/sigaa/public/extensao/consulta_extensao.jsf?acao=4&aba=p-extensao">
+			Consulte os Eventos de extensão realizados pela UFPB
+		</a>
+		</div>
+	</dt>
+	
+	<dt>
+		<div class="opcao ProdutoExtensao">
+		<h3>Produtos</h3>
+		<a href="/sigaa/public/extensao/consulta_extensao.jsf?acao=6&aba=p-extensao">
+			Consulte os Produtos de extensão desenvolvidos pela UFPB
+		</a>
+		</div>
+	</dt>
+	
+	<dt>
+		<div class="opcao processoGraduacao">
+			<h3>Visualizar Cursos ou Eventos</h3>
+			<a href="/sigaa/public/extensao/paginaListaPeriodosInscricoesAtividadesPublico.jsf?aba=p-extensao">
+				Consulte os Cursos e Eventos de extensão da UFPB que possuem inscrições abertas.
+			</a>
+		</div>
+	</dt>
+	
+	
+	<dt>
+		<div class="opcao processoTransferencia">
+			<h3>Acesso à Área de Inscritos em Cursos e Eventos</h3>
+			<a href="/sigaa/link/public/extensao/acessarAreaInscrito">
+				Realize o acesso na área de inscritos para gerenciar as inscrições nos cursos e eventos
+			</a>
+		</div>
+	</dt>
+</dl>
+
+
+	</div>
+	<div id="pesquisa" class="ufpb-abas-conteudo">
+		<dl>
+	<dt>
+		<div class="opcao pesquisadores">
+		<h3>Pesquisadores</h3>
+		<a href="/sigaa/public/pesquisa/consulta_projetos.jsf?aba=p-pesquisa">
+			Consulte quem pesquisa o que na UFPB
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao bases">
+		<h3>Bases de Pesquisa</h3>
+		<a href="/sigaa/public/pesquisa/consulta_bases.jsf?aba=p-pesquisa">
+			Consulte as bases de pesquisa atuantes na UFPB
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao bolsistas">
+		<h3>Iniciação Científica</h3>
+		<a href="/sigaa/public/pesquisa/consulta_bolsistas.jsf?aba=p-pesquisa">
+			Conheça nossos bolsistas de Iniciação Científica
+		</a>
+		</div>
+	</dt>
+	
+</dl>
+	</div>
+	<div id="processos" class="ufpb-abas-conteudo">
+		<dl>
+	<dt>
+		<div class="opcao processoLatos">
+		<h3>Processos Seletivos - Lato Sensu</h3>
+		<a href="/sigaa/public/processo_seletivo/lista.jsf?aba=p-processo&nivel=L">
+			Consulte os processos seletivos de nível latos-sensu abertos,
+			 inscreva-se ou gerencie suas inscrições.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao processoStricto">
+		<h3>Processos Seletivos - Stricto Sensu</h3>
+		<a href="/sigaa/public/processo_seletivo/lista.jsf?aba=p-processo&nivel=S">
+			Consulte os processos seletivos de nível stricto-sensu abertos,
+			 inscreva-se ou gerencie suas inscrições.
+		</a>
+		</div>
+	</dt>
+	
+</dl>
+<dl>
+	<dt>
+		<div class="opcao processoTecnico">
+		<h3>Processos Seletivos - Técnico</h3>
+		<a href="/sigaa/public/processo_seletivo/lista.jsf?aba=p-processo&nivel=T">
+			Consulte os processos seletivos de nível técnico abertos,
+			 inscreva-se ou gerencie suas inscrições.
+		</a>
+		</div>
+	</dt>
+	<dt>
+		<div class="opcao processoInfantil">
+		<h3>Processos Seletivos - Infantil</h3>
+		<a href="/sigaa/public/processo_seletivo/lista.jsf?aba=p-processo&nivel=I">
+			Consulte os processos seletivos de nível infantil abertos,
+			 inscreva-se ou gerencie suas inscrições.
+		</a>
+		</div>
+	</dt>	
+</dl>
+
+	</div>
+</div>
+
+<br clear="all"/>
+
+<div id="noticias">
+	<div class="box-geral">
+		<div class="box-cabecalho">
+			<h2 class="page-header"> Notícias e Comunicados </h2>
+		</div>
+		<div class="box-conteudo">
+			
+
+			
+			
+				<div style="text-align: center; font-style: italic; padding: 10px">
+				Não há notícias cadastradas
+				</div>
+			
+		
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+	</div> <!-- fecha ufrn-container -->
+	<div class="push"></div>
+</div> <!-- fecha wrapper -->
+
+<div id="ufrn-rodape">
+	<div class="ufrn-container">
+		<div class="rodape-sinfo">
+			<a href="">
+				<img width="60px" alt="STI - Superintendência de Tecnologia da Informação" title="STI - Superintendência de Tecnologia da Informação" src="/sigaa/shared/beta/img/sti_logo_preto_branco.png">
+			</a>
+		</div>
+		
+		<div class="rodape-informacao-sistema">
+			SIGAA - 20200811165018-master -| STI - Superintendência de Tecnologia da Informação | Copyright &copy; 2006-2020 - UFPB
+		</div>
+		
+		<div class="rodape-redes-sociais">
+		  
+		</div>
+    </div>
+</div>
+
+
+
+
+
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-1324301-9', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>	
+
+
+
+</body>
+</html>				
+ 
