@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Teses e Dissertações &#8211; Programa de Pós-Graduação em Letras</title>
+	<atom:link href="http://www.cchla.ufpb.br/ppgl/?feed=rss2&#038;cat=49" rel="self" type="application/rss+xml" />
+	<link>http://www.cchla.ufpb.br/ppgl</link>
+	<description>Universidade Federal da Paraíba</description>
+	<lastBuildDate>Thu, 26 Jul 2018 11:48:26 +0000</lastBuildDate>
+	<language>pt-BR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.6</generator>
+	<item>
+		<title>TD-2014</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=503</link>
+				<pubDate>Wed, 14 May 2014 14:16:47 +0000</pubDate>
+		<dc:creator><![CDATA[ANA CRISTINA MARINHO LUCIO]]></dc:creator>
+				<category><![CDATA[Teses e Dissertações]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl2/?p=503</guid>
+				<description><![CDATA[MANUEL BANDEIRA ENTRE O SAGRADO E O PROFANO MARIA CECÍLIA PIMENTEL DE CASTRO PINTO ALMEIDA &#160; “UM ATALHO, UMA CLAREIRA, COISA ASSIM, NO CAMINHO”: REFLEXÕES SOBRE OS LUGARES DE HENRIQUETA LISBOA NO CONTEXTO DA LITERATURA BRASILEIRA. ANA LÚCIA MARIA DE SOUZA NEVES &#160; O SERTÃO ROMÂNTICO: LEITURA DE O SERTANEJO, DE ALENCAR, E DE INOCÊNCIA, DE TAUNAY. MÔNICA CRISTINA [&#8230;]]]></description>
+									</item>
+	</channel>
+</rss>

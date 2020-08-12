@@ -1,0 +1,206 @@
+/*
+ Theme Name:   PPGL
+ Description:  Piedmont Child Theme
+ Author:       Rodrigo CCHLA
+ Template:     piedmont
+ Version:      1.0.0
+*/
+
+@import url("../piedmont/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+/*
+
+NOVO
+*/
+
+.headerppgl {background: url('header.png');
+	/*width: 38px;*/
+	height: 200px;
+background-repeat: no-repeat;}
+
+.byline, .cat-links {display: none;}
+
+.single .byline, .group-blog .byline {
+  display: none;
+}
+
+footer.entry-meta a {color: white;}
+
+.widget-area h1 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  color: white;
+}
+/*
+
+FIM NOVO
+*/
+
+
+
+#ufpb-logo {
+	background: url('ufpb.png');
+	width: 38px;
+	height: 56px;
+	margin: 10px auto;
+	
+	}
+
+a:hover {text-decoration: underline;}
+
+a:focus {color: white;}
+	
+body {
+
+background-color: #ffffff;
+background-image: url('bg-ppgl.jpg');
+background-repeat: no-repeat;
+background-position: top center;
+background-attachment: scroll;
+}
+	
+#primary .entry-title {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.post {border-radius: 5px;}
+	
+a {color: #F08A4B;}
+a:hover {color: #F08A4B;}
+a:visited {color: #F08A4B;}
+
+.site-branding{
+	background: none;
+	background-repeat: no-repeat;
+	width: 260px;
+height: 120px;
+}
+
+.site-title, .site-description {
+	display: none;
+}
+
+
+
+#site-navigation {display: none;}
+
+.site-footer {
+	background: none;
+	padding-top: 2em;
+	padding-bottom: 0;
+}
+
+#colophon .wrap {
+	background: #F9802E;
+	padding-top: 20px;
+padding-bottom: 20px;
+text-align: center;
+color: white;
+}
+
+
+
+
+#secondary {float: left;
+width: 26%;
+}
+
+#primary {float: right;
+width: 71%;}
+
+/*.nav-menu {display: none;}*/
+
+
+#masthead .search-form {float: right;
+margin-top: 20px;
+background: #DE8200;
+border: 5px solid #DE8200;
+border-radius: 3px;
+}
+
+#masthead {margin-top: 20px;}
+
+
+#page .content-area article.type-post, .search-results .content-area article.hentry {
+padding-bottom: 0;
+border: #FA9653 solid 1px;
+}
+
+
+.page-title {
+background: white;
+padding-left: 30px;
+border-radius: 3px;
+color: #F9802E;
+font-weight: bold !important;
+border: solid 1px #f5ce92;
+font-size: 30px !important;
+}
+
+.widget {
+margin: 0 0 1.5em;
+background: #F9802E;
+padding: 1em;
+border-bottom: 0px;
+border-radius: 5px;
+}
+
+#secondary a {
+	color: white;
+}
+
+.widget.widget_categories li a, .widget.widget_pages li a, .widget.widget_nav_menu li a, .widget_recent_entries ul li {
+padding: 4px 0px;
+display: block;
+border-bottom: 1px solid #FF9B0D;
+}
+
+#content .wrap {min-width: 932px !important;}
+
+.site-info {font-size: 13px;}
+
+
+.wrap {
+		width: 932px !important;
+		margin: 0 auto;
+}
+
+footer.entry-meta {
+padding: 1em;
+border-top: 1px solid #FA9653;
+text-align: right;
+margin: 0 -2em;
+background: #FA9653;
+}
+
+.content-area article.hentry {
+	border-top: 2px solid #F5CE92;
+}
+
+.entry-meta {
+	height: 22px;
+	padding: 0em !important;
+}
+
+
+/*css dos menus*/
+
+#nav_menu-3, #nav_menu-4 {
+background: #F9802E;
+
+
+}
+
+#nav_menu-3 a , #nav_menu-4 a{
+	color: white;
+	border-bottom: 1px solid #FF9B0D;
+	font-weight: 100;
+	
+}
+
+#nav_menu-2 {margin-bottom: 25px;}

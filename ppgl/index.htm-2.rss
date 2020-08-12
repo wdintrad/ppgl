@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Programa de Pós-Graduação em Letras</title>
+	<atom:link href="http://www.cchla.ufpb.br/ppgl/?feed=rss2&#038;lang=en" rel="self" type="application/rss+xml" />
+	<link>http://www.cchla.ufpb.br/ppgl</link>
+	<description>Universidade Federal da Paraíba</description>
+	<lastBuildDate>Wed, 29 May 2019 19:14:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.6</generator>
+	<item>
+		<title>13th Brazilian Forum of Translators / 7th International Forum of Translators</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=4031</link>
+				<pubDate>Wed, 29 May 2019 19:14:16 +0000</pubDate>
+		<dc:creator><![CDATA[ROBERTO ASSIS]]></dc:creator>
+				<category><![CDATA[Sem categoria]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl/?p=4031</guid>
+				<description><![CDATA[The 13th Brazilian Forum of Translators and 7th International Forum of Translators will be held in João Pessoa during October 7 to 11, 2019. See more information at ENTRAD 2019]]></description>
+									</item>
+		<item>
+		<title>Postgraduate Program in Letters</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=3474</link>
+				<pubDate>Fri, 27 Jul 2018 12:43:43 +0000</pubDate>
+		<dc:creator><![CDATA[suporte]]></dc:creator>
+				<category><![CDATA[Sem categoria]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl/?p=3474</guid>
+				<description><![CDATA[Welcome to the Postgraduate Program in Letters website!]]></description>
+									</item>
+	</channel>
+</rss>

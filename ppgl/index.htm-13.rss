@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Uncategorised &#8211; Programa de Pós-Graduação em Letras</title>
+	<atom:link href="http://www.cchla.ufpb.br/ppgl/?feed=rss2&#038;cat=2" rel="self" type="application/rss+xml" />
+	<link>http://www.cchla.ufpb.br/ppgl</link>
+	<description>Universidade Federal da Paraíba</description>
+	<lastBuildDate>Thu, 26 Jul 2018 11:49:47 +0000</lastBuildDate>
+	<language>pt-BR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.6</generator>
+	<item>
+		<title>Motivações significativas de itens lexicais da linguagem regional-popular nos atlas lingüísticos brasileiros</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=215</link>
+				<pubDate>Thu, 08 Nov 2012 14:51:41 +0000</pubDate>
+		<dc:creator><![CDATA[ANA CRISTINA MARINHO LUCIO]]></dc:creator>
+				<category><![CDATA[Uncategorised]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl2/?p=215</guid>
+				<description><![CDATA[Este projeto tem como base teórica os princípios, métodos e técnicas da dialetologia/geolinguística, trabalhando com um corpus de falares regionais, cartografados nos atlas lingüísticos regionais; da sociolingüística, por terem os informantes as características lingüísticas de variantes sociais; da Etnolinguística, uma vez que as formas lingüísticas por eles utilizadas estão diretamente relacionadas a sua cultura local [&#8230;]]]></description>
+									</item>
+	</channel>
+</rss>

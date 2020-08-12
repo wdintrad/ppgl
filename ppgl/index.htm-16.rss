@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Literatura e Cultura &#8211; Programa de Pós-Graduação em Letras</title>
+	<atom:link href="http://www.cchla.ufpb.br/ppgl/?feed=rss2&#038;cat=51" rel="self" type="application/rss+xml" />
+	<link>http://www.cchla.ufpb.br/ppgl</link>
+	<description>Universidade Federal da Paraíba</description>
+	<lastBuildDate>Thu, 26 Jul 2018 11:48:26 +0000</lastBuildDate>
+	<language>pt-BR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.6</generator>
+	<item>
+		<title>O ESPETÁCULO SEMIÓTICO DO TEXTO LITERÁRIO DE EXPRESSÃO POPULAR:  INTERSUBJETIVIDADE E MULTICULTURALISMO</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=436</link>
+				<pubDate>Wed, 16 Oct 2013 10:34:01 +0000</pubDate>
+		<dc:creator><![CDATA[ANA CRISTINA MARINHO LUCIO]]></dc:creator>
+				<category><![CDATA[Literatura e Cultura]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl2/?p=436</guid>
+				<description><![CDATA[&#160; O projeto apresenta, como modelo teórico, a tendência semiótica proposta por Greimas e seus colaboradores da chamada Escola Semiótica de Paris. Ressalta os procedimentos teóricos metodológicos da sociossemiótica, da psicosemiótica e, em especial, da semiótica das culturas de linha francesa, aplicados à análise do texto literário de expressão popular. São contemplados como corpus, ainda, [&#8230;]]]></description>
+									</item>
+		<item>
+		<title>RAÍZES DO BRASIL NA LITERATURA POPULAR:  INTERSUBJETIVIDADE E MULTICULTURALISMO</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=435</link>
+				<pubDate>Wed, 16 Oct 2013 10:31:00 +0000</pubDate>
+		<dc:creator><![CDATA[ANA CRISTINA MARINHO LUCIO]]></dc:creator>
+				<category><![CDATA[Literatura e Cultura]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl2/?p=435</guid>
+				<description><![CDATA[&#160; Aprovado pelo CNPq, com bolsa de produtividade em pesquisa, este projeto tem como objetivo analisar, do ponto de vista da semiótica das culturas, o texto literário de expressão popular que faz referência às três figuras étnicas que entraram na composição do povo brasileiro, a fim de descobrir a ideologia subjacente aos discursos. São destacadas, [&#8230;]]]></description>
+									</item>
+		<item>
+		<title>Projeto de Pesquisa: Estudo e tradução de textos medievais de autoria feminina</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=434</link>
+				<pubDate>Wed, 16 Oct 2013 10:02:35 +0000</pubDate>
+		<dc:creator><![CDATA[ANA CRISTINA MARINHO LUCIO]]></dc:creator>
+				<category><![CDATA[Literatura e Cultura]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl2/?p=434</guid>
+				<description><![CDATA[&#160; Luciana Eleonora de Freitas Calado Deplagne Projeto de Pesquisa: Estudo e tradução de textos medievais de autoria feminina O projeto de pesquisa busca recuperar a memória literária feminina, através de estudo e tradução de textos medievais de autoria feminina. Trata-se, portanto, de um duplo interesse: o estudo da literatura medieval, com ênfase na produção [&#8230;]]]></description>
+									</item>
+	</channel>
+</rss>

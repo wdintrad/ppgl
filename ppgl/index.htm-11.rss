@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Mestrado &#8211; Programa de Pós-Graduação em Letras</title>
+	<atom:link href="http://www.cchla.ufpb.br/ppgl/?feed=rss2&#038;cat=43" rel="self" type="application/rss+xml" />
+	<link>http://www.cchla.ufpb.br/ppgl</link>
+	<description>Universidade Federal da Paraíba</description>
+	<lastBuildDate>Thu, 26 Jul 2018 11:48:25 +0000</lastBuildDate>
+	<language>pt-BR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.6</generator>
+	<item>
+		<title>Egressos 2015</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=1412</link>
+				<pubDate>Thu, 22 Oct 2015 12:38:32 +0000</pubDate>
+		<dc:creator><![CDATA[ANA CRISTINA MARINHO LUCIO]]></dc:creator>
+				<category><![CDATA[Mestrado]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl/?p=1412</guid>
+				<description><![CDATA[Adaylson Wagner Sousa de Vasconcelos [Lattes] Ana Maria Nunes [Lattes] Angélica Fabiana Linhares Saldanha [Lattes] Bruna Belmont de Oliveira [Lattes] Bruno Rafael de Lima Vieira [Lattes] Carlos André Cordeiro de Oliveira [Lattes] Francielly Alves Pessoa [Lattes] Francisca Lailsa Ribeiro Pinto [Lattes] Janile Pequeno Soares [Lattes] Juliana Goldfarb de Oliveira [Lattes] Lindjane dos Santos Pereira [Lattes] Luszenildo Ferreira Simões Costa [Lattes] Melina [&#8230;]]]></description>
+									</item>
+		<item>
+		<title>Egressos 2014</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=1409</link>
+				<pubDate>Thu, 22 Oct 2015 12:31:58 +0000</pubDate>
+		<dc:creator><![CDATA[ANA CRISTINA MARINHO LUCIO]]></dc:creator>
+				<category><![CDATA[Mestrado]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl/?p=1409</guid>
+				<description><![CDATA[Maria Cecília Pimentel de Castro Pinto Almeida Bruno Ricardo de Souto Leite Kesia Viviane da Mota Grygena dos Santos Targino Rodrigues Sheila Maria Tabosa Silva Souto Suellen Rodrigues Ramos da Silva Camila Machado Burgardt Maria Graciele de Lima Paulo Aldemir Delfino Lopes Alexandre de Albuquerque Sousa Ariela Fernandes Sales Rinah de Araújo Souto Emmanuela Nogueira [&#8230;]]]></description>
+									</item>
+		<item>
+		<title>Egressos 2013</title>
+		<link>http://www.cchla.ufpb.br/ppgl/?p=1406</link>
+				<pubDate>Thu, 22 Oct 2015 12:25:59 +0000</pubDate>
+		<dc:creator><![CDATA[ANA CRISTINA MARINHO LUCIO]]></dc:creator>
+				<category><![CDATA[Mestrado]]></category>
+
+		<guid isPermaLink="false">http://www.cchla.ufpb.br/ppgl/?p=1406</guid>
+				<description><![CDATA[Afonso Manoel da Silva Barbosa Alecia Lucélia Gomes Pereira Alexandre de Assis Monteiro Amanda Carvalho Mendes Curvelo Amanda Ramalho de Freitas Brito Ana Ângela de Oliveira Santana Ana Karla Albuquerque André Guedes Trindade Ângela Paula Nunes Ferreira Diógenes Marques Frazão de Souza Edineyalison Wallas Henrique F. Pereira Eliane de Menezes Cabral Helenita Bezerra de Carvalho [&#8230;]]]></description>
+									</item>
+	</channel>
+</rss>
